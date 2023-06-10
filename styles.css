@@ -1,0 +1,121 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .gameTitle {
+    text-align: center;
+  }
+  
+  .rules {
+    margin-top: 50px;
+    border-style: solid;
+    border-color: #5c5c5c;
+    padding: 10px;
+    max-width: 600px;
+    flex: 1;
+    padding-right: 20px;
+
+  }
+  
+  .rules h3, .rules h4 {
+    margin: 10px 0;
+  }
+  
+  .rules p {
+    margin: 5px 0;
+  }
+  
+  .playerForm {
+    margin-top: 20px;
+    flex: 1;
+    margin-left: 100px;
+    margin-top: 90px;
+  }
+  
+  .playerForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .playerForm input[type="number"] {
+    width: 40px;
+  }
+  
+  .addBtn {
+    margin-top: 10px;
+  }
+  
+  #playerInputs {
+    margin-top: 20px;
+  }
+
+  input, select, button {
+    background-color: #85fdd9;
+  }
+
+  .error {
+    color: rgba(255, 0, 0, 0.808);
+  }
+  
+  #startGameBtn {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  #gameSection {
+    margin-top: 20px;
+  }
+  
+  #gameSection h3 {
+    margin-top: 0;
+  }
+
+  #scores {
+    margin-left: 5%;
+  }
+  
+  #dices {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  #dices img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #game {
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+  }
+  
+  #currentPlayer {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #424242;
+  }
+  
+  #rollBtn, #endTurnBtn, #restartBtn {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  #score {
+    margin-top: 20px;
+  }

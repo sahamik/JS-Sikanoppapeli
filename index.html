@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikanoppapeli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="gameTitle">
+        <h1>Sikanoppapeli</h1>
+    </div>
+    <div class="container">
+        <div class="rules" id="rulesSection">
+            <h3>Pelin säännöt</h3>
+            <h4>Voit pelata sikaa yhdellä tai kahdella nopalla!</h4>
+            <div>
+                <h4>Yhdellä nopalla</h4>
+                <p>Pelin tarkoitus on kerätä sata pistettä tai enemmän (pistemäärän voi sopia ennen peliä) heittämällä noppaa tai noppia ja laskemalla heittojen summa yhteen.</p>
+                Pelaaja heittää omalla vuorollaan noppaa niin pitkään, kunnes
+                <br>
+                <br>
+                a. heittää ykkösen
+                <br>
+                b. päättää lopettaa heittämisen.
+                <br>
+                <br>
+                Jos pelaaja heittää ykkösen, hänen vuoronsa loppuu ja sen kierroksen heittojen summa nollataan.
+                Vuoro siirtyy seuraavalle pelaajalle. Jos pelaaja päättää lopettaa heittämisen ennen kuin hän heittää ykkösen, heittojen summa lasketaan yhteen ja lisätään edellisen kierroksen summaan.
+                Tämän jälkeen vuoro siirtyy seuraavalle pelaajalle.
+            </div>
+            <div>
+                <h4>Kahdella nopalla</h4>
+                <p>Sikaa voit pelata kahdella nopalla, jolloin säännöt muuttuvat hieman: Kun heität tuplat, saat tuplapisteet (esim. kaksi kolmosta on 12 pisteen arvoinen heitto).
+                Kun heität kaksi ykköstä, saat 25 pistettä Kun heität vain toisella nopalla ykkösen, vuoro siirtyy seuraavalle pelaajalle etkä saa pisteitä Kun heität kolme tuplaa peräkkäin, vuoro siirtyy seuraavalle pelaajalle etkä saa pisteitä.
+                </p>
+            </div>
+        </div>
+
+        <div class="playerForm" id="playersSection">
+            <h3>Valitse pelaajien määrä ja anna pelaajien nimet</h3>
+            <label for="playersCount">Pelaajien määrä:</label>
+            <input type="number" id="playersCount" name="playersCount" value="0" min="1" max="5">
+            <br>
+            <div id="diceSection">
+                <label for="diceCount">Noppien määrä:</label>
+                <select id="diceCount" name="diceCount">
+                    <option value="1">Yksi noppa</option>
+                    <option value="2">Kaksi noppaa</option>
+                </select>
+            </div>
+            <button type="button" class="addBtn" onclick="createInputs()">Lisää pelaajat</button>
+        
+            <div id="playerInputs" type="text"></div>
+            <div id="errorMessages"></div>
+                <button type="button" id="startGameBtn" onclick="startGame()" style="display: none;">Aloita peli</button>
+            </div>
+        </div>
+    </div>
+
+        <div id="gameSection" style="display: none;">
+            <div id="scores">
+                <h3>Pisteet</h3>
+                <div id="score"></div>
+            </div>
+            <div id="dices">
+                <img id="dice1" src="/images/D6.png">
+                <img id="dice2" src="/images/D6.png">
+            </div>
+            <div id="game">
+                <h2>Pelitilanne</h2>
+                <div id="currentPlayer"></div>
+
+                <button type="button" id="rollBtn" onclick="rollDice()">Heitä noppaa</button>
+                <button type="button" id="endTurnBtn" onclick="endTurn()">Lopeta vuoro</button>
+                <button type="button" id="restartBtn" onclick="restart()">Uusi peli</button>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+
+    </body>
+
+</html>
